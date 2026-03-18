@@ -74,6 +74,8 @@ function updateClippingPolygons() {
     new Cesium.ClippingPolygonCollection({
       polygons: clippingPolygons,
       inverse: false, // false = cut holes where buildings are
+      quality: 0.25,
+      debugShowDistanceTexture: false,
     });
 }
 
@@ -81,6 +83,7 @@ function addClip(footprint, _feature, _tile, _entityCollection) {
   clippingPolygons.push(
     new Cesium.ClippingPolygon({
       positions: footprint.hierarchy.positions,
+      immutable: true,
     }),
   );
 }
