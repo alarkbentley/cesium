@@ -12,6 +12,7 @@
 
 - Added experimental, performance-focused vector primitive APIs: `BufferPointCollection`, `BufferPolylineCollection`, and `BufferPolygonCollection`. [#13212](https://github.com/CesiumGS/cesium/pull/13212)
 - Added support for Reality Data of type `ITwinPlatform.RealityDataType.GaussianSplat3DTiles` to `ITwinData.createTilesetForRealityDataId`. [#13208](https://github.com/CesiumGS/cesium/pull/13208)
+- Added GetFeatureInfo support to `WebMapTileServiceImageryProvider`, enabling `WebMapTileServiceImageryProvider.pickFeatures` for both KVP and RESTful WMTS services. New class parameters include `enablePickFeatures`, `getFeatureInfoFormats`, `getFeatureInfoUrl`, and `getFeatureInfoParameters`. [#13196](https://github.com/CesiumGS/cesium/pull/13196)
 - Added an immutable option to ClippingPolygon to enable internal optimizations. [#13273](https://github.com/CesiumGS/cesium/pull/13273)
 
 #### Fixes :wrench:
@@ -27,6 +28,7 @@
 #### Fixes :wrench:
 
 - Fixes a regression with the NGA-GPM local extension and custom shaders. [#13247](https://github.com/CesiumGS/cesium/pull/13247)
+- Fixes a non-invertible matrix crash when zooming into globe without collision detection enabled [#13078](https://github.com/CesiumGS/cesium/issues/13078)
 
 ### @cesium/sandcastle
 
